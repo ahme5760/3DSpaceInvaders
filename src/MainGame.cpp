@@ -293,7 +293,7 @@ void printScore(){
 	  }
 }
 void alienMovementAlgorithm(){
-	if (myWorld.list[1]->getMC().mat[0][3] > 0){    // alien move algorithm, using primitive "mutex locks" (ie boolean value to make sure aliens shift only when its time to shift.)
+	if (myWorld.list[1]->getMC().mat[0][3] > 0){    // alien move ( boolean value to make sure aliens shift only when its time to shift.)
 		shift = true;
 		for (int k = 1; k <=num_aliens; k++){
 			myWorld.list[k]->translate(0, -0.2, 0);
@@ -717,7 +717,7 @@ int main(int argc, char** argv) {
 
 
 	glutInitWindowSize(winWidth, winHeight);
-	glutCreateWindow("3D Space Invaders - By Ali Ahmed and Qamar Farooq");
+	glutCreateWindow("3D Space Invaders - By Ali Ahmed");
 	init();
 	menu();
 
